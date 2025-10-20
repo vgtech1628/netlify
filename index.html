@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VG Technologies</title>
+    <link rel="icon" href="img/logo.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0d1117, #1e2329);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #f0c14b;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: #f0c14b;
+            margin: 20px 0;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .freelancer-photo {
+            width: 300px;
+            height: 350px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .freelancer-info {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .freelancer-info h2 {
+            color: #f0c14b;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .buttons button {
+            background: #f0c14b;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            margin: 10px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buttons button:hover {
+            background: #d4a017;
+        }
+
+        /* Login Page */
+        #loginPage {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .login-options button {
+            display: block;
+            width: 250px;
+            margin: 10px auto;
+            background: #f0c14b;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-options button:hover {
+            background: #d4a017;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VG Technologies</h1>
+        <p>Get your ideas into reality.</p>
+    </header>
+    <hr>
+    <main>
+        <!-- Replace the image path below with your actual portrait photo -->
+        <img src="img/freelancer.png" alt="Freelancer Photo" class="freelancer-photo">
+        <div class="freelancer-info">
+            <h2>Freelancer Information</h2>
+            <p><strong>Name:</strong> Ganesh V</p>
+            <p><strong>Specialization:</strong> Web Development, App Design, and Freelance Projects</p>
+            <p><strong>Experience:</strong> 3+ years in creating digital solutions for clients worldwide.</p>
+            <p><strong>Contact:</strong> vganesh@example.com</p>
+        </div>
+    </main>
+    <hr>
+    <div class="buttons">
+        <button onclick="showLogin()">Login</button>
+        <button onclick="showRegister()">Register</button>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage">
+        <header>
+            <h1>VG Technologies</h1>
+            <p>Get your ideas into reality.</p>
+        </header>
+        <div class="login-options">
+            <button>Sign in with Google</button>
+            <button>Login with Mobile Number</button>
+            <button onclick="showRegister()">Register (New User)</button>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            document.body.innerHTML = document.getElementById('loginPage').outerHTML;
+            document.getElementById('loginPage').style.display = 'block';
+        }
+
+        function showRegister() {
+            alert('Register page will be created next.');
+        }
+    </script>
+</body>
+</html>
